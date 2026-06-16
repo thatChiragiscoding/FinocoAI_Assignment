@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "provider": "groq",
+    "version": "v2",
+    "total_questions": 10
+  },
+  "metrics": {
+    "grounded_answer_rate": 0.571,
+    "refusal_accuracy": 1.0,
+    "avg_confidence_correct": 0.529,
+    "avg_confidence_wrong": 0.0,
+    "avg_latency_ms": 22158.2,
+    "grounded_correct": 4,
+    "grounded_total": 7,
+    "refusal_correct": 3,
+    "refusal_total": 3
+  },
+  "results": [
+    {
+      "question": "Who is the first author of this paper, and what institution are they affiliated with?",
+      "answer": "Wenlin Zhang, City University of Hong Kong, China",
+      "answerable": true,
+      "confidence": 1.0,
+      "citations": [
+        {
+          "section": "Abstract",
+          "page": 1,
+          "snippet": "WENLIN ZHANG, City University of Hong Kong, China"
+        }
+      ],
+      "reasoning": "The snippet directly states the name and affiliation of the first author.",
+      "latency_ms": 5761,
+      "provider": "groq",
+      "id": "q1",
+      "shape": "direct_lookup",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "According to the paper's taxonomy, what are the main stages of the autonomous research agent pipeline? List them in the order the paper presents them.",
+      "answer": "Planning, Question Developing, Web Exploration, and Report Generation",
+      "answerable": true,
+      "confidence": 0.9,
+      "citations": [
+        {
+          "section": "1 Introduction",
+          "page": 1,
+          "snippet": "The Deep Research process typically involves four interconnected stages: Planning. This stage involves decomposing a high-level research question into structured sub-goals or subtasks. Question Developing. Given a sub-goal, the agent formulates one or more retrieval queries that capture specific, contextualized information needs. Web Exploration. The agent actively interacts with external sources either through web APIs or browser-based actions to collect relevant information. Report Generation. To produce a structured report, the agent must integrate retrieved information by selecting relevant evidence, organizing content coherently, and ensuring both consistency and completeness."
+        }
+      ],
+      "reasoning": "The snippet directly lists the four stages of the autonomous research agent pipeline in the order they are presented in the paper.",
+      "latency_ms": 24002,
+      "provider": "groq",
+      "id": "q2",
+      "shape": "direct_lookup",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "How many sub-sections does Section 4 ('Web Exploration') contain, and what are their titles?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "LLM call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  (Q\ud835\udc56, R, \ud835\udf03, H). \\n\\n[Excerpt 2 | Section: 5 Web Retrieval | Page: 11 | Score: 19.4634]\\nThe web retrieval process is a critical component of web exploration. Given a query Q\ud835\udc56, the goal of the web retriever R is to return a ranked list of relevant web documents D = R(Q\ud835\udc56). The web retriever R takes the query Q\ud835\udc56 as input and returns a list of web documents D that are relevant to the query. The web retriever R can be a search engine or a custom-built web crawler. \\n\\nQuestion: What is the goal of the web retriever R? \\n{\"type\": \"function\", \"name\": \"answer\", \"parameters\": {\"answer\": \"The goal of the web retriever R is to return a ranked list of relevant web documents D = R(Q\ud835\udc56).\"}}}'}}",
+      "latency_ms": 1983,
+      "provider": "groq",
+      "id": "q3",
+      "shape": "quantitative",
+      "_auto_graded_correct": false
+    },
+    {
+      "question": "Under the 'Question Developing' chapter (Section 3), the paper distinguishes between two methodological approaches in sub-sections 3.2 and 3.3. What are they, and how does the paper define the difference?",
+      "answer": "Reward-Optimized Methods and Supervision-Driven Methods",
+      "answerable": true,
+      "confidence": 0.9,
+      "citations": [
+        {
+          "section": "Section: 3.1 Definition",
+          "page": 6,
+          "snippet": "Question developing methods can be categorized into two types based on optimization methods: Reward-Optimized Methods, where the query formulation process is optimized through trial-and-error exploration guided by a reward signal; and Supervision-Driven Methods, which rely on supervised finetuning or manually designed strategies without explicit reward-driven query optimization."
+        },
+        {
+          "section": "Section: 3.3 Supervision-Driven Methods",
+          "page": 8,
+          "snippet": "In contrast to reward-optimized approaches, which rely on RL optimization, supervision-driven methods develop question generation strategies using supervised fine-tuning, rule-based decompositions, or structured multi-agent workflows."
+        }
+      ],
+      "reasoning": "The snippets from sections 3.1 and 3.3 directly state the two methodological approaches and describe their differences.",
+      "latency_ms": 21859,
+      "provider": "groq",
+      "id": "q4",
+      "shape": "buried_section",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "Within the Discussion subsection at the end of 'Web Exploration' (Section 4.3), what specific limitation or open challenge does the paper highlight?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "LLM call failed: Error code: 400 - {'error': {'message': \"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\", 'type': 'invalid_request_error', 'code': 'json_validate_failed', 'failed_generation': '{\\n  (Q\ud835\udc56, R, \ud835\udf03, H). The web exploration module is responsible for retrieving relevant information from diverse sources conditioned on the input research queries. The web exploration process can be divided into two main approaches: (1) web retrieval agents, and (2) API-based systems. Web retrieval agents excel at dynamically navigating web interfaces, mimicking human browsing to access interactive or unindexed content, making them highly adaptable for complex inquiries. However, their resource-intensive nature and lack of real-time trustworthiness assessment pose significant drawbacks. Conversely, API-based systems offer rapid, efficient access to pre-indexed data from established search engines, ensuring reliability but often overlooking niche or dynamic content. Both approaches, while effective in isolation, are limited by their disconnect from upstream research stages like question formulation and evidence planning, hindering their ability to fully adapt to specific research needs. \\n\\n{\"type\": \"function\", \"name\": \"get_answer\", \"parameters\": {\"question\": \"What are the two main approaches to web exploration in deep research?\", \"excerpts\": [\"Excerpt 1\", \"Excerpt 2\", \"Excerpt 3\", \"Excerpt 4\"]}}}'}}",
+      "latency_ms": 9707,
+      "provider": "groq",
+      "id": "q5",
+      "shape": "buried_section",
+      "_auto_graded_correct": false
+    },
+    {
+      "question": "Why does the paper treat 'Planning' (Section 2) and 'Question Developing' (Section 3) as separate stages of the pipeline rather than combining them into one?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "The provided excerpts do not explicitly address why the paper treats 'Planning' and 'Question Developing' as separate stages.",
+      "latency_ms": 20916,
+      "provider": "groq",
+      "id": "q6",
+      "shape": "interpretation",
+      "_auto_graded_correct": false
+    },
+    {
+      "question": "Based on Section 5 ('Report Generation'), why is 'Factual Integrity' (5.2) treated as a distinct concern from 'Structure Control' (5.1)?",
+      "answer": "Factual Integrity is treated as a distinct concern from Structure Control because it focuses on ensuring that the generated report is faithful to the retrieved evidence, while Structure Control focuses on organizing multi-step reasoning and retrieved content into coherent formats.",
+      "answerable": true,
+      "confidence": 0.9,
+      "citations": [
+        {
+          "section": "5.1 Structure Control",
+          "page": 12,
+          "snippet": "Structure control refers to generating long-form outputs that are both structurally coherent and globally consistent."
+        },
+        {
+          "section": "5.2 Factual Integrity",
+          "page": 13,
+          "snippet": "Factual consistency is a cornerstone of report generation in Deep Research, where generated outputs must faithfully reflect retrieved evidence."
+        }
+      ],
+      "reasoning": "The distinction between Factual Integrity and Structure Control is evident from their definitions and focuses in Sections 5.1 and 5.2, which highlight the unique concerns of each.",
+      "latency_ms": 22742,
+      "provider": "groq",
+      "id": "q7",
+      "shape": "interpretation",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "What is the per-query dollar cost of running the systems described in this paper?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "The question asks about dollar costs, which is explicitly mentioned in the adversarial refusal rules as a reason to set answerable to false.",
+      "latency_ms": 45336,
+      "provider": "groq",
+      "id": "q8",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    },
+    {
+      "question": "How does the methodology in this paper compare against AlphaFold2's approach to protein-structure prediction?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "The question compares this paper to AlphaFold2, which is not mentioned in the excerpts.",
+      "latency_ms": 28000,
+      "provider": "groq",
+      "id": "q9",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    },
+    {
+      "question": "What does the paper specifically recommend for use with the GPT-5 model when building research agents?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "The excerpts do not mention the GPT-5 model, so there is no recommendation for its use.",
+      "latency_ms": 41276,
+      "provider": "groq",
+      "id": "q10",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    }
+  ]
+}

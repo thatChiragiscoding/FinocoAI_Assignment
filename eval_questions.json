@@ -1,0 +1,52 @@
+[
+  {
+    "id": "q1",
+    "shape": "direct_lookup",
+    "question": "Who is the first author of this paper, and what institution are they affiliated with?"
+  },
+  {
+    "id": "q2",
+    "shape": "direct_lookup",
+    "question": "According to the paper's taxonomy, what are the main stages of the autonomous research agent pipeline? List them in the order the paper presents them."
+  },
+  {
+    "id": "q3",
+    "shape": "quantitative",
+    "question": "How many sub-sections does Section 4 ('Web Exploration') contain, and what are their titles?"
+  },
+  {
+    "id": "q4",
+    "shape": "buried_section",
+    "question": "Under the 'Question Developing' chapter (Section 3), the paper distinguishes between two methodological approaches in sub-sections 3.2 and 3.3. What are they, and how does the paper define the difference?"
+  },
+  {
+    "id": "q5",
+    "shape": "buried_section",
+    "question": "Within the Discussion subsection at the end of 'Web Exploration' (Section 4.3), what specific limitation or open challenge does the paper highlight?"
+  },
+  {
+    "id": "q6",
+    "shape": "interpretation",
+    "question": "Why does the paper treat 'Planning' (Section 2) and 'Question Developing' (Section 3) as separate stages of the pipeline rather than combining them into one?"
+  },
+  {
+    "id": "q7",
+    "shape": "interpretation",
+    "question": "Based on Section 5 ('Report Generation'), why is 'Factual Integrity' (5.2) treated as a distinct concern from 'Structure Control' (5.1)?"
+  },
+  {
+    "id": "q8",
+    "shape": "adversarial_out_of_doc",
+    "question": "What is the per-query dollar cost of running the systems described in this paper?"
+  },
+  {
+    "id": "q9",
+    "shape": "adversarial_out_of_doc",
+    "question": "How does the methodology in this paper compare against AlphaFold2's approach to protein-structure prediction?"
+  },
+  {
+    "id": "q10",
+    "shape": "adversarial_out_of_doc",
+    "question": "What does the paper specifically recommend for use with the GPT-5 model when building research agents?"
+  }
+]

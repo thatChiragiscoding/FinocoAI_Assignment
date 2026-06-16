@@ -1,0 +1,8 @@
+pymupdf
+chromadb
+sentence-transformers
+google-genai
+groq
+python-dotenv
+pytest
+openpyxl

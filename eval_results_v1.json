@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "provider": "gemini",
+    "version": "v1",
+    "total_questions": 10
+  },
+  "metrics": {
+    "grounded_answer_rate": 0.857,
+    "refusal_accuracy": 1.0,
+    "avg_confidence_correct": 0.872,
+    "avg_confidence_wrong": 0.0,
+    "avg_latency_ms": 2321.9,
+    "grounded_correct": 6,
+    "grounded_total": 7,
+    "refusal_correct": 3,
+    "refusal_total": 3
+  },
+  "results": [
+    {
+      "question": "Who is the first author of this paper, and what institution are they affiliated with?",
+      "answer": "The first author of the paper is Wenlin Zhang, affiliated with City University of Hong Kong, China.",
+      "answerable": true,
+      "confidence": 1.0,
+      "citations": [
+        {
+          "section": "Abstract",
+          "page": 1,
+          "snippet": "WENLIN ZHANG, City University of Hong Kong, China XIAOPENG LI, City University of Hong Kong, China YINGYI ZHANG, Dalian University of Technology & City University of Hong Kong, China PENGYUE JIA, City University of Hong Kong, China YICHAO WANG, Huawei Noah s Ark Lab, China HUIFENG GUO, Huawei Noah s Ark Lab, China YONG LIU, Huawei Noah s Ark Lab, China XIANGYU ZHAO , City University of Hong Kong, China The rapid advancement of large language models (LLMs) has driven the development of agentic systems capable of autonomously performing complex tasks."
+        }
+      ],
+      "reasoning": "The abstract explicitly lists the authors and their affiliations, with Wenlin Zhang and his affiliation being the first entry.",
+      "latency_ms": 2654,
+      "provider": "gemini",
+      "id": "q1",
+      "shape": "direct_lookup",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "According to the paper's taxonomy, what are the main stages of the autonomous research agent pipeline? List them in the order the paper presents them.",
+      "answer": "The main stages of the deep research pipeline are planning, question developing, web exploration, and report generation.",
+      "answerable": true,
+      "confidence": 1.0,
+      "citations": [
+        {
+          "section": "Abstract",
+          "page": 1,
+          "snippet": "In this survey, we provide a systematic overview of the deep research pipeline, which comprises four core stages: planning, question developing, web exploration, and report generation."
+        }
+      ],
+      "reasoning": "The excerpt explicitly lists the four core stages of the deep research pipeline in the order they are presented.",
+      "latency_ms": 2234,
+      "provider": "gemini",
+      "id": "q2",
+      "shape": "direct_lookup",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "How many sub-sections does Section 4 ('Web Exploration') contain, and what are their titles?",
+      "answer": "Section 4 ('Web Exploration') contains three sub-sections: 4.1 Definition, 4.2 Methods, and 4.3 Discussion.",
+      "answerable": true,
+      "confidence": 1.0,
+      "citations": [
+        {
+          "section": "4 Web Exploration",
+          "page": 9,
+          "snippet": "Definition 4.1 (Web Exploration). In the context of deep research, web exploration is the process of retrieving the most relevant information from online sources."
+        },
+        {
+          "section": "7 Benchmark and Evaluation",
+          "page": 14,
+          "snippet": "Table 5 summarizes major benchmarks and the specific modules they cover within the Deep Research workflow."
+        },
+        {
+          "section": "4.3 Discussion",
+          "page": 11,
+          "snippet": "Web exploration is vital for deep research, providing precise and relevant evidence from the expansive web through two main approaches: Web retrieval agents excel at dynamically navigating web interfaces, mimicking human browsing to access interactive or unindexed content, making them highly adaptable for complex inquiries."
+        }
+      ],
+      "reasoning": "The existence of sub-sections 4.1, 4.2, and 4.3 is implied by the explicit mention of '4.1 Definition' and '4.3 Discussion' in relation to 'Web Exploration', and the structure of academic papers generally includes a 'Methods' section which would logically be '4.2 Methods'.",
+      "latency_ms": 2984,
+      "provider": "gemini",
+      "id": "q3",
+      "shape": "quantitative",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "Under the 'Question Developing' chapter (Section 3), the paper distinguishes between two methodological approaches in sub-sections 3.2 and 3.3. What are they, and how does the paper define the difference?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "LLM call failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+      "latency_ms": 1571,
+      "provider": "gemini",
+      "id": "q4",
+      "shape": "buried_section",
+      "_auto_graded_correct": false
+    },
+    {
+      "question": "Within the Discussion subsection at the end of 'Web Exploration' (Section 4.3), what specific limitation or open challenge does the paper highlight?",
+      "answer": "The paper highlights that both web retrieval agents and API-based systems are limited by their disconnect from upstream research stages like question formulation and evidence planning, which hinders their ability to fully adapt to specific research needs.",
+      "answerable": true,
+      "confidence": 1.0,
+      "citations": [
+        {
+          "section": "4.3 Discussion",
+          "page": 11,
+          "snippet": "Both approaches, while effective in isolation, are limited by their disconnect from upstream research stages like question formulation and evidence planning, hindering their ability to fully adapt to specific research needs."
+        }
+      ],
+      "reasoning": "This snippet directly addresses a limitation of the discussed approaches within the specified section.",
+      "latency_ms": 2391,
+      "provider": "gemini",
+      "id": "q5",
+      "shape": "buried_section",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "Why does the paper treat 'Planning' (Section 2) and 'Question Developing' (Section 3) as separate stages of the pipeline rather than combining them into one?",
+      "answer": "The paper treats 'Planning' and 'Question Developing' as separate stages because planning involves decomposing a high-level research question into structured sub-goals or subtasks, while question developing takes a sub-goal from the planning stage and formulates one or more retrieval queries to capture specific, contextualized information needs, which may vary in abstraction, specificity, and granularity.",
+      "answerable": true,
+      "confidence": 0.9,
+      "citations": [
+        {
+          "section": "1 Introduction",
+          "page": 1,
+          "snippet": "Planning. This stage involves decomposing a high-level research question into structured sub-goals or subtasks."
+        },
+        {
+          "section": "1 Introduction",
+          "page": 1,
+          "snippet": "Question Developing. Given a sub-goal, the agent formulates one or more retrieval queries that capture specific, contextualized information needs. These queries may vary in abstraction, specificity, and granularity."
+        }
+      ],
+      "reasoning": "The provided excerpts explicitly define the distinct responsibilities of the Planning and Question Developing stages, illustrating why they are treated separately within the pipeline.",
+      "latency_ms": 2553,
+      "provider": "gemini",
+      "id": "q6",
+      "shape": "interpretation",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "Based on Section 5 ('Report Generation'), why is 'Factual Integrity' (5.2) treated as a distinct concern from 'Structure Control' (5.1)?",
+      "answer": "Factual Integrity is treated as a distinct concern because it focuses on ensuring the generated report is faithful to the retrieved evidence, whereas Structure Control focuses on organizing multi-step reasoning and retrieved content into coherent formats.",
+      "answerable": true,
+      "confidence": 0.95,
+      "citations": [
+        {
+          "section": "5 Report Generation",
+          "page": 11,
+          "snippet": "The methods for report generation can be broadly categorized into two types: structure control and factual integrity. (1) Structure control focuses on organizing multi-step reasoning and retrieved content into coherent formats, often relying on planning-aware generation or constraint-guided generation. (2) Factual integrity aims to ensure that the generated report is faithful to the retrieved evidence, typically through grounding mechanisms or post-generation verification."
+        }
+      ],
+      "reasoning": "This excerpt directly defines and differentiates the two categories, 'structure control' and 'factual integrity', within the context of report generation.",
+      "latency_ms": 2385,
+      "provider": "gemini",
+      "id": "q7",
+      "shape": "interpretation",
+      "_auto_graded_correct": true
+    },
+    {
+      "question": "What is the per-query dollar cost of running the systems described in this paper?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 1.0,
+      "citations": [],
+      "reasoning": "The provided excerpts do not contain any information regarding the per-query dollar cost of running the described systems.",
+      "latency_ms": 2485,
+      "provider": "gemini",
+      "id": "q8",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    },
+    {
+      "question": "How does the methodology in this paper compare against AlphaFold2's approach to protein-structure prediction?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 1.0,
+      "citations": [],
+      "reasoning": "The provided excerpts discuss deep research agents, their capabilities like planning, question developing, web exploration, and report generation, but do not mention AlphaFold2 or its methodology for protein-structure prediction.",
+      "latency_ms": 1952,
+      "provider": "gemini",
+      "id": "q9",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    },
+    {
+      "question": "What does the paper specifically recommend for use with the GPT-5 model when building research agents?",
+      "answer": "NOT IN DOCUMENT",
+      "answerable": false,
+      "confidence": 0.0,
+      "citations": [],
+      "reasoning": "The provided excerpts mention GPT-4 but do not contain any information or recommendations regarding the GPT-5 model for building research agents.",
+      "latency_ms": 2010,
+      "provider": "gemini",
+      "id": "q10",
+      "shape": "adversarial_out_of_doc",
+      "_refused_correctly": true
+    }
+  ]
+}
