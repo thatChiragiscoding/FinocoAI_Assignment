@@ -283,4 +283,5 @@ Three models were tried before settling on the final choice:
 
 ## Recording
 
-mp4 file attached in the repository itself
+shared via email
+
